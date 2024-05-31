@@ -62,26 +62,36 @@ body {
     font-size: 30px;
 }
 
+.content a {
+    text-decoration: none;
+}
+
 .content button {
     padding: 15px 30px;
     width: 200px;
     background-color:#a8cada;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     border-radius: 10px;
     margin: 30px 0;
     font-weight: 00;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Chewy", system-ui;
     color: #B8860B;
+}
+
+.content button:hover {
+    opacity: 0.7;
 }
 
 #countdown {
     display: flex;
     justify-content: center;
     column-gap: 30px;
-    border: 1px solid;
+    border: 2px solid;
+    border-radius: 8px;
+    width: auto;
 }
 
 #countdown p {
@@ -93,6 +103,7 @@ body {
 @media (max-width:600px) {
     .wrapper {
         flex-direction: column;
+        padding: 20px;
     }
 
     .wrapper .content {
@@ -100,12 +111,12 @@ body {
     }
 
     .content h1 {
-        font-size: 50px;
+        font-size: 43px;
     }
 
     #countdown {
-        column-gap: 20px;
-        width: 100;
+        column-gap: 10px;
+        width: 100%;
     }
 
     #countdown p {
