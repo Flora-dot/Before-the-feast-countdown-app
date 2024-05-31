@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Inter:wght@400;500;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #010B13;
+    font-family: "Chewy", system-ui;
+    color: #B8860B;
+}
+
+.wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.album-cover {
+    flex: 1;
+    transform: translateX(-100%);
+    animation: slideInLeft 3s forwards;
+    opacity: 0;
+}
+
+.album-cover img {
+    width: 100%;
+}
+
+.wrapper .content {
+    flex: 1;
+    transform: translateX(100%);
+    animation: slideInRight 3s forwards;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.content h1 {
+    font-size: 70px;
+    text-transform: capitalize;
+    background-color: #a8cada;
+    width: fit-content;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.content h3 {
+    font-size: 30px;
+}
+
+.content button {
+    padding: 15px 30px;
+    width: 200px;
+    background-color:#a8cada;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 30px 0;
+    font-weight: 00;
+    font-size: 20px;
+    font-family: "Chewy", system-ui;
+    color: #B8860B;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    border: 1px solid;
+}
+
+#countdown p {
+    font-size: 40px;
+    padding: 2px 5px;
+}
+
+
+@media (max-width:600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper .content {
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    #countdown {
+        column-gap: 20px;
+        width: 100;
+    }
+
+    #countdown p {
+        font-size: 25px;
+    }
+}
