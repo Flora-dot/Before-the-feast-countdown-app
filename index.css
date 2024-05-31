@@ -107,11 +107,11 @@ body {
     }
 
     .wrapper .content {
-        padding: 10px;
+        /* padding: 10px; */
     }
 
     .content h1 {
-        font-size: 43px;
+        font-size: 40px;
     }
 
     #countdown {
